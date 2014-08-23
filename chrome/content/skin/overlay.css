@@ -3,9 +3,9 @@ a {
     text-decoration:none;
     text-align:left;
     color:#dddddd;
-    font-size:16px;
+    font-size:14px;
     font-weight:normal;
-    font-family:"HaxrCorp 4089 Cyrillic AltGr";
+    font-family:"Calibri";
 }
 a:hover {
     text-decoration:none;
@@ -16,9 +16,9 @@ ul, li {
     text-decoration:none;
     text-align:left;
     color:#dddddd;
-    font-size:16px;
+    font-size:14px;
     font-weight:normal;
-    font-family:"HaxrCorp 4089 Cyrillic AltGr";
+    font-family:"Calibri";
 }
 li {
     padding-left: 0em;

@@ -22,7 +22,7 @@
     <em:name>Tabby</em:name>
     <em:description>It begins</em:description>
     <em:creator>Laura Barber</em:creator>
-    <em:homepageURL>http://www.example.com/</em:homepageURL>
+    <em:homepageURL>https://github.com/Lixxia/Tabby</em:homepageURL>
     <!-- <em:iconURL>geticonheresoon</em:iconURL> -->
     <em:optionsURL>chrome://tabby/content/options.xul</em:optionsURL>
   </Description>
