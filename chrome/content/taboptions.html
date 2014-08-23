@@ -1,0 +1,19 @@
+<!-- form for tabs -->
+<form name="tabs">
+    <input type="checkbox" value="facebook"> Facebook <br>
+    <input type="checkbox" value="twitter"> Twitter <br>
+    <input type="checkbox" value="bank"> Bank <br>
+</form>
+
+<script>
+function getCheckedVals() {
+    var values = [];
+    var checks = document.forms['tabs'].elements;
+    for(var i=0;i<checks.length;i++){
+      if(checks[i].checked){
+        values.push(checks[i].value);
+    }
+}
+console.log('You selected: ' + values.join(', '));
+}
+</script>

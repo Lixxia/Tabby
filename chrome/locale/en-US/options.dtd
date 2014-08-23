@@ -1,0 +1,20 @@
+<!ENTITY tabbyoptions.Tabs "Tabs">
+<!ENTITY tabbyoptions.Icons "Icons">
+<!ENTITY tabbyoptions.ShowFacebook "Facebook">
+<!ENTITY tabbyoptions.ShowTwitter "Twitter">
+<!ENTITY tabbyoptions.ShowYoutube "Youtube">
+<!ENTITY tabbyoptions.ShowWash "Wash">
+<!ENTITY tabbyoptions.ShowGPlus "Google+">
+<!ENTITY tabbyoptions.ShowGDrive "Google Drive">
+<!ENTITY tabbyoptions.ShowBank "Bank">
+<!ENTITY tabbyoptions.ShowLinked "LinkedIn">
+<!ENTITY tabbyoptions.ShowBlogger "Blogger">
+<!ENTITY tabbyoptions.ShowPint "Pinterest">
+<!ENTITY tabbyoptions.ShowGit "Github">
+<!ENTITY tabbyoptions.ShowSpace "Separator">
+<!ENTITY tabbyoptions.ShowWeather "Weather">
+<!ENTITY tabbyoptions.ShowClock "Clock">
+<!ENTITY tabbyoptions.White "White">
+<!ENTITY tabbyoptions.Black "Black">
+<!ENTITY tabbyoptions.Color "Color">
+f

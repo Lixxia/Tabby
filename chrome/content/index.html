@@ -1,0 +1,114 @@
+<head>
+    <title>Praise jeebus</title>
+    <link rel="stylesheet" type="text/css" href="chrome://tabby/content/skin/overlay.css">
+    <link rel="stylesheet" href="chrome://tabby/content/assets/font-awesome-4.1.0/css/font-awesome.min.css">
+</head>
+<script src="bookmarks.js"></script>
+<script src="tabs.js"></script>
+<script src="options.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<body style="background:url(chrome://tabby/content/assets/images/background.jpg); background-position: right bottom;
+background-repeat: no-repeat; background-attachment:fixed;">
+
+</body>
+
+<script>
+    //Start bookmark fetching
+    //Icons
+    //To-do: get favicons
+    //var img = "<img src='chrome://tabby/content/assets/images/wf.png'> ";
+    var img = "<i class='fa fa-folder-o fa-inverse'></i>";
+    var blank = "    ";
+    //<img src='chrome://tabby/content/assets/images/blank.png'>
+    var bookmarks = getBookmarks();
+    var html = "";
+    var toType = function(obj) {
+        return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
+    }
+    var i=0;
+    while(i<bookmarks.length) {
+        var bookmark = bookmarks[i];
+        if(bookmark.folder) {
+            html+= createFolder(bookmarks);
+            // console.log("its a folder!", bookmark);
+        }
+        else if(!bookmark.folder) {
+            // console.log("not a folder", bookmark);
+            html += "<li><a href='"+bookmark.url+"'>"+ blank + bookmark.title  + "</a></li>";
+            i++;
+        }
+        console.log("Typehopefully",toType(bookmark));
+        console.log(bookmark);
+    }
+    function createFolder(bookmarks) {
+        console.log("in createFolder");
+        var folderHtml = "";
+        folderHtml += "<li><span class='Collapsable'>" + img + bookmarks[i].title + "</span><ul>";
+        i++;
+        console.log("asking for contents",bookmarks[i]);
+        folderHtml += folderContents(bookmarks[i]);
+        folderHtml += "</ul></li>";
+        return folderHtml;
+    }
+    function createSubFolder(bookmarks,num) {
+        console.log("in createSubFolder");
+        var subFolderHtml = "";
+        subFolderHtml += "<li><span class='Collapsable'>" + img + bookmarks[num].title + "</span><ul>";
+        num++;
+        subFolderHtml += folderContents(bookmarks[num]);
+        subFolderHtml += "</ul></li>";
+        return subFolderHtml;
+    }
+    function folderContents(bookmarks) {
+        console.log("in folderContents");
+        var contentsHtml = "";
+        for(var c=0; c < bookmarks.length;c++) {
+            if(bookmarks[c].folder) {
+                console.log("folder in contents, bookmark C", bookmarks[c]);
+                console.log("folder in contents, bookmark C+1", bookmarks[c+1]);
+                contentsHtml += createSubFolder(bookmarks,c);
+            }
+            //references undefined bookmarks.title when getting out of subfolders, so check for undefined
+            else if(!bookmarks[c].folder && bookmarks[c].title != undefined) {
+                contentsHtml += "<li><a href='"+bookmarks[c].url+"'>" + blank + bookmarks[c].title + "</a></li>";
+            }
+        }
+        i++;
+        return contentsHtml;
+    }
+    //end bookmark fetching
+    //output results into html doc body
+    var tabArray = fetchOptions();
+    var tabHtml = getTabs(tabArray);
+    document.body.innerHTML = "<ul>" + html + "</ul>" + tabHtml;
+
+    //jQuery for bookmark tree
+    //ref: https://stackoverflow.com/questions/5636375/how-to-create-a-collapsing-tree-table-in-html-css-js
+    var toggle = function () {
+        $(this).parent().children().toggle();
+        $(this).toggle();
+    };
+    $(".Collapsable").click(toggle);
+    $(".Collapsable").each(toggle);
+    //end bookmark tree
+
+    //jquery animation for tabs
+    $(function() {
+        $('div.tab').hover(function() {
+            // animate out
+            $(this)
+                .stop(true, false)
+                .animate({
+                    right: 0
+                }, 200);
+        }, function() {
+            // move mouse, animate back in
+            $(this)
+                .stop(true, false)
+                .animate({
+                    right: -15
+                }, 200);
+        });
+    });
+    //end tabs
+</script>

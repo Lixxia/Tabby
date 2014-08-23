@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Clock</title>
+</head>
+<body style="background:url(chrome://tabby/content/assets/images/background.jpg); background-position: right bottom;
+background-repeat: no-repeat; background-attachment:fixed;">
+    <script type="text/javascript">
+        function GetClock(){
+            var d = new Date();
+            var hours  = d.getHours();
+            var mins   = d.getMinutes();
+            // add 0 to pad minutes
+            if(mins <= 9) {
+                mins="0"+mins
+            }
+
+            var time = ""
+            if (hours > 12) {
+                hours -= 12;
+                time = "pm";
+            } else if (hours === 0) {
+                hours = 12;
+            } else {
+                time = "am"
+            }
+
+            document.getElementById('clockbox').innerHTML=""+hours+":"+mins+""+time;
+            setTimeout("GetClock()", 1000);
+        }
+        window.onload=GetClock;
+    </script>
+    <div id="clockbox" style="font:200px Futura; color:#444444; position: fixed; top: 65%; left: 10;"></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "chrome://tabby/locale/options.dtd">
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="options.css" type="text/css"?>
+
+<dialog id="tabby-prefs"
+    title="Tabby Options"
+    onload="updateOptions()"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    persist="screenX screenY"
+    buttons="accept">
+<script type="application/javascript" src="options.js"/>
+<tabbox>
+    <tabs>
+        <tab label="&tabbyoptions.Tabs;"/>
+        <tab label="&tabbyoptions.Icons;"/>
+    </tabs>
+    <tabpanels>
+        <tabpanel id="tabs">
+            <vbox>
+                <checkbox label="&tabbyoptions.ShowFacebook;" id="facebook" persist="checked" />
+                <checkbox label="&tabbyoptions.ShowTwitter;" id="twitter" persist="checked" />
+                <checkbox label="&tabbyoptions.ShowYoutube;" id="youtube" persist="checked" />
+                <checkbox label="&tabbyoptions.ShowWash;" id="wash" persist="checked" />
+                <checkbox label="&tabbyoptions.ShowGPlus;" id="gplus" persist="checked" />
+                <checkbox label="&tabbyoptions.ShowGDrive;" id="gdrive" persist="checked" />
+                <checkbox label="&tabbyoptions.ShowBank;" id="bank" persist="checked" />
+                <checkbox label="&tabbyoptions.ShowLinked;" id="linkedin" persist="checked" />
+                <checkbox label="&tabbyoptions.ShowBlogger;" id="blogger" persist="checked" />
+                <checkbox label="&tabbyoptions.ShowPint;" id="pinterest" persist="checked" />
+                <checkbox label="&tabbyoptions.ShowGit;" id="github" persist="checked" />
+                <checkbox label="&tabbyoptions.ShowSpace;" id="space" persist="checked" />
+                <checkbox label="&tabbyoptions.ShowWeather;" id="weather" persist="checked" />
+                <checkbox label="&tabbyoptions.ShowClock;" id="clock" persist="checked" />
+            </vbox>
+        </tabpanel>
+        <tabpanel id="icons">
+            <vbox>
+                <radiogroup>
+                    <radio label="&tabbyoptions.Color;" id="color" persist="selected" />
+                    <image id="colorimg"/>
+                    <radio label="&tabbyoptions.White;" id="white" persist="selected" />
+                    <image id="whiteimg"/>
+                    <radio label="&tabbyoptions.Black;" id="black" persist="selected" />
+                    <image id="blackimg"/>
+                </radiogroup>
+            </vbox>
+        </tabpanel>
+    </tabpanels>
+</tabbox>
+</dialog>

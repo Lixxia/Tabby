@@ -1,0 +1,57 @@
+/*css for bookmarks stuff*/
+a {
+    text-decoration:none;
+    text-align:left;
+    color:#dddddd;
+    font-size:16px;
+    font-weight:normal;
+    font-family:"HaxrCorp 4089 Cyrillic AltGr";
+}
+a:hover {
+    text-decoration:none;
+    color:#00adee;
+}
+ul, li {
+    list-style-type: none;
+    text-decoration:none;
+    text-align:left;
+    color:#dddddd;
+    font-size:16px;
+    font-weight:normal;
+    font-family:"HaxrCorp 4089 Cyrillic AltGr";
+}
+li {
+    padding-left: 0em;
+    text-indent: -1.2em;
+}
+.collapsable:hover {
+    text-decoration:none;
+    color:#00adee;
+}
+body {
+    cursor:default;
+    background-color:#555555;
+}
+/*css for tabs*/
+div.hold {
+    position:fixed;
+    top: 10%;
+    right: 0px;
+}
+div.tab {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    top: 5px;
+    right: -15px;
+
+}
+div.tab a {
+    opacity: 0.3;
+}
+div.tab a:hover {
+    opacity: 0.9;
+}
+
+
+

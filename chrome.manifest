@@ -1,0 +1,3 @@
+content tabby chrome/content/
+overlay chrome://browser/content/browser.xul  chrome://tabby/content/browserOverlay.xul
+locale  tabby    en-US   chrome/locale/en-US/
