@@ -12,8 +12,8 @@
 - [ ] Reorganize code 
 	- [ ] Use handlebars to integrate HTML
 	- [ ] etc.
-- [x] Use [FontAwesome](fontawesome.io) instead of images for icons
-- [ ] Remanage [FontAwesome](fontawesome.io)
+- [x] Use [FontAwesome](http://fontawesome.io) instead of images for icons
+- [ ] Remanage FontAwesome
 	- [ ] Install FontAwesome using bower
 	- [ ] Add FontAwesome to .gitignore
 	- [ ] Have bower.json in project root
