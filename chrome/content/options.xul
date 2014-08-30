@@ -2,14 +2,17 @@
 <!DOCTYPE window SYSTEM "chrome://tabby/locale/options.dtd">
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <?xml-stylesheet href="options.css" type="text/css"?>
+<?xml-stylesheet href="chrome://tabby/content/assets/font-awesome-4.1.0/css/font-awesome.min.css" type="text/css"?>
 
 <dialog id="tabby-prefs"
     title="Tabby Options"
     onload="updateOptions()"
     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
     xmlns:html="http://www.w3.org/1999/xhtml"
+    width="500"
     persist="screenX screenY"
-    buttons="accept">
+    buttons="accept"
+    >
 <script type="application/javascript" src="options.js"/>
 <tabbox>
     <tabs>
@@ -39,11 +42,14 @@
             <vbox>
                 <radiogroup>
                     <radio label="&tabbyoptions.Color;" id="color" persist="selected" />
-                    <!-- <image id="colorimg"/> -->
+                    <i class="fa fa-facebook fa-4x" id="colorimg"></i>
                     <radio label="&tabbyoptions.White;" id="white" persist="selected" />
-                    <!-- <image id="whiteimg"/> -->
+                    <span class="fa-stack">
+                        <i class="fa fa-square fa-stack-1x fa-5x"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse fa-4x" id="whiteimg"></i>
+                    </span>
                     <radio label="&tabbyoptions.Black;" id="black" persist="selected" />
-                    <!-- <image id="blackimg"/> -->
+                    <i class="fa fa-facebook fa-4x" id="blackimg"></i>
                 </radiogroup>
             </vbox>
         </tabpanel>

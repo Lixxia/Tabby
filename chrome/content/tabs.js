@@ -8,7 +8,7 @@ var tabValues = {
         cimg: "fa fa-facebook fa-inverse fa-2x",
         wimg: "fa fa-facebook fa-inverse fa-2x",
         bimg: "fa fa-facebook fa-2x",
-        url: "https://facebook.com",
+        url: "https://facebook.com"
     },
     'twitter': {
         cimg: "fa fa-twitter fa-inverse fa-2x",
@@ -20,82 +20,91 @@ var tabValues = {
         cimg: "fa fa-youtube fa-inverse fa-2x",
         wimg: "fa fa-youtube fa-inverse fa-2x",
         bimg: "fa fa-youtube fa-2x",
-        url: "https://youtube.com",
+        url: "https://youtube.com"
     },
     'linkedin': {
         cimg: "fa fa-linkedin fa-inverse fa-2x",
         wimg: "fa fa-linkedin fa-inverse fa-2x",
         bimg: "fa fa-linkedin fa-2x",
-        url: "https://linkedin.com",
+        url: "https://linkedin.com"
     },
     'bank': {
         cimg: "fa fa-bank fa-inverse fa-2x",
         wimg: "fa fa-bank fa-inverse fa-2x",
         bimg: "fa fa-bank fa-2x",
-        url: "https://www.bankofamerica.com/",
+        url: "https://www.bankofamerica.com/"
     },
     'reddit': {
         cimg: "fa fa-reddit fa-inverse fa-2x",
         wimg: "fa fa-reddit fa-inverse fa-2x",
         bimg: "fa fa-reddit fa-2x",
-        url: "https://reddit.com",
+        url: "https://reddit.com"
     },
     'gdrive': {
         cimg: "fa fa-google-plus fa-inverse fa-2x",
         wimg: "fa fa-google-plus fa-inverse fa-2x",
         bimg: "fa fa-gogle-plus fa-2x",
-        url: "https://plus.google.com",
+        url: "https://plus.google.com"
     },
     'gplus': {
         cimg: "fa fa-google-plus fa-inverse fa-2x",
         wimg: "fa fa-google-plus fa-inverse fa-2x",
         bimg: "fa fa-gogle-plus fa-2x",
-        url: "https://plus.google.com",
+        url: "https://plus.google.com"
     },
     'wash': {
         cimg: "fa fa-tint fa-inverse fa-2x",
         wimg: "fa fa-tint fa-inverse fa-2x",
         bimg: "fa fa-tint fa-2x",
-        url: "http://campus.ee/tenant/selvepesulad/?lang=en",
+        url: "http://campus.ee/tenant/selvepesulad/?lang=en"
     },
     'github': {
         cimg: "fa fa-github fa-inverse fa-2x",
         wimg: "fa fa-github fa-inverse fa-2x",
         bimg: "fa fa-github fa-2x",
-        url: "https://github.com",
+        url: "https://github.com"
     },
     'clock': {
         cimg: "fa fa-clock-o fa-inverse fa-2x",
         wimg: "fa fa-clock-o fa-inverse fa-2x",
         bimg: "fa fa-clock-o fa-2x",
-        url: "chrome://tabby/content/clock.html",
+        url: "chrome://tabby/content/clock.html"
     },
     'space': {
         cimg: "fa fa-minus fa-inverse fa-2x",
         wimg: "fa fa-minus fa-inverse fa-2x",
         bimg: "fa fa-minus fa-2x",
-        url: "",
+        url: "https://google.com"
     },
     'weather': {
         cimg: "fa fa-umbrella fa-inverse fa-2x",
         wimg: "fa fa-umbrella fa-inverse fa-2x",
         bimg: "fa fa-umbrella fa-2x",
-        url: "http://www.weather.com/weather/today/Tartu+ENXX0005:1:EN",
+        url: "http://www.weather.com/weather/today/Tartu+ENXX0005:1:EN"
     },
     'pinterest': {
         cimg: "fa fa-pinterest fa-inverse fa-2x",
         wimg: "fa fa-pinterest fa-inverse fa-2x",
         bimg: "fa fa-pinterest fa-2x",
-        url: "https://pinterest.com",
+        url: "https://pinterest.com"
+    },
+    'trello' : {
+        cimg: "fa fa-trello fa-inverse fa-2x",
+        wimg: "fa fa-trello fa-inverse fa-2x",
+        bimg: "fa fa-trello fa-2x",
+        url: "https://trello.com"
     }
 };
 
 function getTabs(tabArray) {
     var tabHtml = "<div class='hold'>";
-    console.log(tabArray);
     for(var i=0;i<tabArray.length;i++) {
-        tabHtml += createTab(tabValues[tabArray[i]]);
-        console.log(tabArray[i]);
+        if (!!tabValues[tabArray[i]]) {
+            tabHtml += createTab(tabValues[tabArray[i]]);    
+        }
+        else {
+            console.error(tabArray[i] + " is not defined in tabValues.");
+        }
     }
     tabHtml += "</div>";
     return tabHtml;

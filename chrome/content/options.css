@@ -1,22 +1,13 @@
-/*#colorimg {
-    list-style-image: url("chrome://tabby/content/assets/colorIcons/twit.png");
-    max-width: 64px;
-    max-height: 64px;
-    min-width: 64px;
-    min-height: 64px;
+#colorimg {
+    color: #0000ff;
 }
 #whiteimg {
-    list-style-image: url("chrome://tabby/content/assets/whiteIcons/gith.png");
-    max-width: 64px;
-    max-height: 64px;
-    min-width: 64px;
-    min-height: 64px;
 }
 #blackimg {
-    list-style-image: url("chrome://tabby/content/assets/blackIcons/drive.png");
-    max-width: 64px;
-    max-height: 64px;
-    min-width: 64px;
-    min-height: 64px;
-}*/
-
+}
+.fa-stack {
+    padding: 11px 0px 10px 0px;
+}
+#black {
+    padding: 15px 0px 0px 0px;
+}

@@ -32,7 +32,6 @@ function getBookmarks() {
                 bookmarks.push(folderRefresh(folderId));
             }
         }
-        console.log("Full array:",bookmarks);
     }
     return bookmarks;
 }
@@ -53,7 +52,6 @@ function folderRefresh(folderId) {
             contents.push(folderRefresh(subFolderId));
         }
     }
-    // console.log("folder contents:",contents);
     return contents;
 }
 

@@ -30,28 +30,21 @@ background-repeat: no-repeat; background-attachment:fixed;">
         var bookmark = bookmarks[i];
         if(bookmark.folder) {
             html+= createFolder(bookmarks);
-            // console.log("its a folder!", bookmark);
         }
         else if(!bookmark.folder) {
-            // console.log("not a folder", bookmark);
             html += "<li><a href='"+bookmark.url+"'>"+ blank + bookmark.title  + "</a></li>";
             i++;
         }
-        console.log("Typehopefully",toType(bookmark));
-        console.log(bookmark);
     }
     function createFolder(bookmarks) {
-        console.log("in createFolder");
         var folderHtml = "";
         folderHtml += "<li><span class='Collapsable'>" + img + bookmarks[i].title + "</span><ul>";
         i++;
-        console.log("asking for contents",bookmarks[i]);
         folderHtml += folderContents(bookmarks[i]);
         folderHtml += "</ul></li>";
         return folderHtml;
     }
     function createSubFolder(bookmarks,num) {
-        console.log("in createSubFolder");
         var subFolderHtml = "";
         subFolderHtml += "<li><span class='Collapsable'>" + img + bookmarks[num].title + "</span><ul>";
         num++;
@@ -60,12 +53,9 @@ background-repeat: no-repeat; background-attachment:fixed;">
         return subFolderHtml;
     }
     function folderContents(bookmarks) {
-        console.log("in folderContents");
         var contentsHtml = "";
         for(var c=0; c < bookmarks.length;c++) {
             if(bookmarks[c].folder) {
-                console.log("folder in contents, bookmark C", bookmarks[c]);
-                console.log("folder in contents, bookmark C+1", bookmarks[c+1]);
                 contentsHtml += createSubFolder(bookmarks,c);
             }
             //references undefined bookmarks.title when getting out of subfolders, so check for undefined
