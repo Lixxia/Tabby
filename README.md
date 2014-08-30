@@ -1,10 +1,14 @@
-# Description
+## Description
+Firefox addon that opens on each new tab and displays:
+- Bookmarks
+- Quick links to important sites
+- Clock page
 
-
-# To do
+## To do
 - [ ] Options menu
 	- [ ] Change color of icons
 	- [ ] Change order of icons
+	- [ ] Change icon size
 	- [ ] Add and remove icons
 	- [ ] Turn off icons completely
 	- [ ] Change font (size, color, face, style)
@@ -17,4 +21,6 @@
 	- [ ] Install FontAwesome using bower
 	- [ ] Add FontAwesome to .gitignore
 	- [ ] Have bower.json in project root
+- [ ] Integrated weather
+
 
