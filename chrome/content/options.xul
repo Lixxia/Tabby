@@ -39,11 +39,11 @@
             <vbox>
                 <radiogroup>
                     <radio label="&tabbyoptions.Color;" id="color" persist="selected" />
-                    <image id="colorimg"/>
+                    <!-- <image id="colorimg"/> -->
                     <radio label="&tabbyoptions.White;" id="white" persist="selected" />
-                    <image id="whiteimg"/>
+                    <!-- <image id="whiteimg"/> -->
                     <radio label="&tabbyoptions.Black;" id="black" persist="selected" />
-                    <image id="blackimg"/>
+                    <!-- <image id="blackimg"/> -->
                 </radiogroup>
             </vbox>
         </tabpanel>
