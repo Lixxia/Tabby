@@ -9,35 +9,58 @@
     onload="updateOptions()"
     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
     xmlns:html="http://www.w3.org/1999/xhtml"
-    width="500"
     persist="screenX screenY"
     buttons="accept"
     >
 <script type="application/javascript" src="options.js"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"/>
 <tabbox>
     <tabs>
         <tab label="&tabbyoptions.Tabs;"/>
+<!--         <tab label="&tabbyoptions.Sort;"/> -->
         <tab label="&tabbyoptions.Icons;"/>
     </tabs>
     <tabpanels>
         <tabpanel id="tabs">
             <vbox>
-                <checkbox label="&tabbyoptions.ShowFacebook;" id="facebook" persist="checked" />
-                <checkbox label="&tabbyoptions.ShowTwitter;" id="twitter" persist="checked" />
-                <checkbox label="&tabbyoptions.ShowYoutube;" id="youtube" persist="checked" />
-                <checkbox label="&tabbyoptions.ShowWash;" id="wash" persist="checked" />
-                <checkbox label="&tabbyoptions.ShowGPlus;" id="gplus" persist="checked" />
-                <checkbox label="&tabbyoptions.ShowGDrive;" id="gdrive" persist="checked" />
-                <checkbox label="&tabbyoptions.ShowBank;" id="bank" persist="checked" />
-                <checkbox label="&tabbyoptions.ShowLinked;" id="linkedin" persist="checked" />
-                <checkbox label="&tabbyoptions.ShowBlogger;" id="blogger" persist="checked" />
-                <checkbox label="&tabbyoptions.ShowPint;" id="pinterest" persist="checked" />
-                <checkbox label="&tabbyoptions.ShowGit;" id="github" persist="checked" />
-                <checkbox label="&tabbyoptions.ShowSpace;" id="space" persist="checked" />
-                <checkbox label="&tabbyoptions.ShowWeather;" id="weather" persist="checked" />
-                <checkbox label="&tabbyoptions.ShowClock;" id="clock" persist="checked" />
+                <html:ul class="sortable list">
+                    <html:li><checkbox label="&tabbyoptions.ShowFacebook;" id="facebook" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.ShowTwitter;" id="twitter" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.ShowYoutube;" id="youtube" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.ShowWash;" id="wash" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.ShowGPlus;" id="gplus" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.ShowGDrive;" id="gdrive" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.ShowBank;" id="bank" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.ShowLinked;" id="linkedin" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.ShowBlogger;" id="blogger" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.ShowPint;" id="pinterest" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.ShowGit;" id="github" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.ShowSpace;" id="space" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.ShowWeather;" id="weather" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.ShowClock;" id="clock" persist="checked" /></html:li>
+                </html:ul>
+                <html:script src="jquery.sortable.js"></html:script>
+                <html:script>
+                    $('.sortable').sortable();
+                </html:script>
             </vbox>
         </tabpanel>
+<!--         <tabpanel id="sort">
+            <vbox>
+                <html:ul class="sortable list">
+                    <html:li><checkbox label="&tabbyoptions.ShowFacebook;" id="facebook" persist="checked" /></html:li>
+                    <html:li>Item 2</html:li>
+                    <html:li>Item 3</html:li>
+                    <html:li>Item 4</html:li>
+                    <html:li>Item 5</html:li>
+                    <html:li>Item 6</html:li>
+                </html:ul>
+                <html:script src="jquery.sortable.js"></html:script>
+                <html:script>
+                    $('.sortable').sortable();
+                </html:script>
+            </vbox>
+        </tabpanel> -->
         <tabpanel id="icons">
             <vbox>
                 <radiogroup>

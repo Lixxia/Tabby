@@ -1,13 +1,24 @@
 #colorimg {
     color: #0000ff;
 }
-#whiteimg {
-}
-#blackimg {
-}
 .fa-stack {
     padding: 11px 0px 10px 0px;
 }
 #black {
     padding: 15px 0px 0px 0px;
+}
+/*li {
+    list-style-type: none;
+    text-decoration:none;
+    text-align:left;
+    border: black 1px solid;
+}*/
+.sortable li {
+    list-style: none outside none;
+    border: 1px solid #CCC;
+    background: none repeat scroll 0% 0% #F6F6F6;
+    color: #1C94C4;
+    margin: 5px;
+    padding: 5px;
+    height: 22px;
 }
