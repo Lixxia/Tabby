@@ -4,6 +4,7 @@
 <?xml-stylesheet href="options.css" type="text/css"?>
 <?xml-stylesheet href="chrome://tabby/content/assets/font-awesome-4.1.0/css/font-awesome.min.css" type="text/css"?>
 
+
 <dialog id="tabby-prefs"
     title="Tabby Options"
     onload="updateOptions()"
@@ -41,7 +42,21 @@
                 </html:ul>
                 <html:script src="jquery.sortable.js"></html:script>
                 <html:script>
-                    $('.sortable').sortable();
+                    $('.sortable').sortable().bind('sortupdate', function() {
+                        //Triggered when the user stopped sorting and the DOM position has changed.
+                        //updateSort($('.sortable').children().children());
+                        var cbox = ($('.sortable').children().children());
+                        console.log(cbox);
+                        var enabled = [];
+                        $.each(cbox, function() {
+                            if(($(this).attr('checked'))=="true") {
+                                //console.log($(this).attr('id'));
+                                enabled.push($(this).attr('id'));
+                            }
+                        });
+                        console.log(enabled);
+                    });;
+
                 </html:script>
             </vbox>
         </tabpanel>

@@ -19,6 +19,12 @@
     background: none repeat scroll 0% 0% #F6F6F6;
     color: #1C94C4;
     margin: 5px;
+    margin-left: -20px;
     padding: 5px;
     height: 22px;
 }
+checkbox:checked + label{
+	color: red;
+
+}
+

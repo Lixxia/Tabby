@@ -85,4 +85,3 @@ function fetchOptions() {
     console.log(tabArray);
     return tabArray;
 }
-
