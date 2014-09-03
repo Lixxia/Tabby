@@ -1,3 +1,7 @@
+//Create firefox preference that stores array in the form of a string
+//create function in options.js, call it from options.xul to do aformentioned storing and return of that
+//string recreated as an array.
+
 function updateOptions() {
     var tabbyprefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
     //.addEventListener(type, listener[, useCapture, wantsUntrusted ]);
@@ -71,6 +75,7 @@ function updateOptions() {
 }
 
 function fetchOptions() {
+    console.log(settings.enabledTabs);
     var idArray = ["facebook","twitter","youtube","wash","gplus","gdrive",
     "bank","linkedin","blogger","pinterest","github","space","weather","clock"];
     var tabArray = [];
@@ -84,4 +89,11 @@ function fetchOptions() {
     }
     console.log(tabArray);
     return tabArray;
+}
+function updateSort(idArray) {
+    idArray = idArray;
+    fetchSortedOptions();
+}
+function fetchSortedOptions() {
+    console.log(idArray);
 }

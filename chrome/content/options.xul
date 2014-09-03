@@ -12,13 +12,13 @@
     xmlns:html="http://www.w3.org/1999/xhtml"
     persist="screenX screenY"
     buttons="accept"
-    >
+>
 <script type="application/javascript" src="options.js"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"/>
+<script src="jquery.sortable.js"/>
 <tabbox>
     <tabs>
         <tab label="&tabbyoptions.Tabs;"/>
-<!--         <tab label="&tabbyoptions.Sort;"/> -->
         <tab label="&tabbyoptions.Icons;"/>
     </tabs>
     <tabpanels>
@@ -40,21 +40,20 @@
                     <html:li><checkbox label="&tabbyoptions.ShowWeather;" id="weather" persist="checked" /></html:li>
                     <html:li><checkbox label="&tabbyoptions.ShowClock;" id="clock" persist="checked" /></html:li>
                 </html:ul>
-                <html:script src="jquery.sortable.js"></html:script>
+                <!-- Come back and look at this, find way to work around .children().children() -->
                 <html:script>
                     $('.sortable').sortable().bind('sortupdate', function() {
                         //Triggered when the user stopped sorting and the DOM position has changed.
-                        //updateSort($('.sortable').children().children());
                         var cbox = ($('.sortable').children().children());
                         console.log(cbox);
-                        var enabled = [];
+                        //var enabled = [];
                         $.each(cbox, function() {
                             if(($(this).attr('checked'))=="true") {
                                 //console.log($(this).attr('id'));
-                                enabled.push($(this).attr('id'));
+                                settings.enabledTabs.push($(this).attr('id'));
                             }
                         });
-                        console.log(enabled);
+                        console.log(settings.enabledTabs);
                     });;
 
                 </html:script>
