@@ -15,4 +15,3 @@ Firefox addon that opens on each new tab and displays:
 - [x] ~~Use [FontAwesome](http://fontawesome.io) instead of images for icons~~
 
 
-
