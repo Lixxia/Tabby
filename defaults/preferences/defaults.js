@@ -13,3 +13,4 @@ pref("extensions.tabby.space",false);
 pref("extensions.tabby.weather",false);
 pref("extensions.tabby.clock",false);
 pref("extensions.tabby.icontype",0);
+pref("extensions.tabby.iconorder","");

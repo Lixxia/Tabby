@@ -1,20 +1,23 @@
 <!ENTITY tabbyoptions.Tabs "Tabs">
 <!ENTITY tabbyoptions.Icons "Icons">
-<!ENTITY tabbyoptions.ShowFacebook "Facebook">
-<!ENTITY tabbyoptions.ShowTwitter "Twitter">
-<!ENTITY tabbyoptions.ShowYoutube "Youtube">
-<!ENTITY tabbyoptions.ShowWash "Wash">
-<!ENTITY tabbyoptions.ShowGPlus "Google+">
-<!ENTITY tabbyoptions.ShowGDrive "Google Drive">
-<!ENTITY tabbyoptions.ShowBank "Bank">
-<!ENTITY tabbyoptions.ShowLinked "LinkedIn">
-<!ENTITY tabbyoptions.ShowBlogger "Blogger">
-<!ENTITY tabbyoptions.ShowPint "Pinterest">
-<!ENTITY tabbyoptions.ShowGit "Github">
-<!ENTITY tabbyoptions.ShowSpace "Separator">
-<!ENTITY tabbyoptions.ShowWeather "Weather">
-<!ENTITY tabbyoptions.ShowClock "Clock">
+<!ENTITY tabbyoptions.facebook "Facebook">
+<!ENTITY tabbyoptions.twitter "Twitter">
+<!ENTITY tabbyoptions.youtube "Youtube">
+<!ENTITY tabbyoptions.wash "Wash">
+<!ENTITY tabbyoptions.gplus "Google+">
+<!ENTITY tabbyoptions.gdrive "Google Drive">
+<!ENTITY tabbyoptions.bank "Bank">
+<!ENTITY tabbyoptions.linked "LinkedIn">
+<!ENTITY tabbyoptions.blogger "Blogger">
+<!ENTITY tabbyoptions.pint "Pinterest">
+<!ENTITY tabbyoptions.git "Github">
+<!ENTITY tabbyoptions.space "Separator">
+<!ENTITY tabbyoptions.weather "Weather">
+<!ENTITY tabbyoptions.clock "Clock">
 <!ENTITY tabbyoptions.White "White">
 <!ENTITY tabbyoptions.Black "Black">
 <!ENTITY tabbyoptions.Color "Color">
+<<<<<<< HEAD
 
+=======
+>>>>>>> tabremoval
