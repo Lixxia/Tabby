@@ -1,7 +1,7 @@
 ## Description
 Firefox addon that opens on each new tab and displays:
 - Bookmarks
-- --Quick links to important sites--
+- ~~Quick links to important sites~~
 - Clock page
 
 ## To do
@@ -12,6 +12,6 @@ Firefox addon that opens on each new tab and displays:
 - [ ] Reorganize code 
 	- [ ] Use handlebars to integrate HTML
 	- [ ] etc.
-- [x] Use [FontAwesome](http://fontawesome.io) instead of images for icons
+- [x] ~~Use [FontAwesome](http://fontawesome.io) instead of images for icons~~
 
 
