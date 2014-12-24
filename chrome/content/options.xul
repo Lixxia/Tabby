@@ -24,37 +24,42 @@
     <tabpanels>
         <tabpanel id="tabs">
             <vbox>
-                <html:ul class="sortable list">
-                    <html:li><checkbox label="&tabbyoptions.ShowFacebook;" id="facebook" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.ShowTwitter;" id="twitter" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.ShowYoutube;" id="youtube" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.ShowWash;" id="wash" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.ShowGPlus;" id="gplus" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.ShowGDrive;" id="gdrive" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.ShowBank;" id="bank" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.ShowLinked;" id="linkedin" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.ShowBlogger;" id="blogger" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.ShowPint;" id="pinterest" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.ShowGit;" id="github" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.ShowSpace;" id="space" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.ShowWeather;" id="weather" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.ShowClock;" id="clock" persist="checked" /></html:li>
+                <html:ul class="sortable list" id="updateMe">
+                    <html:li><checkbox label='&tabbyoptions.facebook;' id='facebook' persist='checked' /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.twitter;" id="twitter" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.youtube;" id="youtube" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.wash;" id="wash" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.gplus;" id="gplus" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.gdrive;" id="gdrive" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.bank;" id="bank" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.linked;" id="linkedin" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.blogger;" id="blogger" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.pint;" id="pinterest" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.git;" id="github" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.space;" id="space" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.weather;" id="weather" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.clock;" id="clock" persist="checked" /></html:li>
                 </html:ul>
-                <!-- Come back and look at this, find way to work around .children().children() -->
+                <!-- Come back and look at this, find way to work around .children().children()
+                Need one array that keeps order of both checked and unchecked elements
+                need another array that keeps order of only checked elements -->
                 <html:script>
+                
                     $('.sortable').sortable().bind('sortupdate', function() {
                         //Triggered when the user stopped sorting and the DOM position has changed.
                         var cbox = ($('.sortable').children().children());
                         console.log(cbox);
-                        //var enabled = [];
+                        enabledTabs = [];
                         $.each(cbox, function() {
-                            if(($(this).attr('checked'))=="true") {
+                            //if(($(this).attr('checked'))=="true") {
                                 //console.log($(this).attr('id'));
-                                settings.enabledTabs.push($(this).attr('id'));
-                            }
+
+                                enabledTabs.push($(this).attr('id'));
+                            //}
                         });
-                        console.log(settings.enabledTabs);
-                    });;
+                        console.log(enabledTabs);
+                        updateOrder(enabledTabs);
+                    });
 
                 </html:script>
             </vbox>
@@ -62,7 +67,7 @@
 <!--         <tabpanel id="sort">
             <vbox>
                 <html:ul class="sortable list">
-                    <html:li><checkbox label="&tabbyoptions.ShowFacebook;" id="facebook" persist="checked" /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.acebook;" id="facebook" persist="checked" /></html:li>
                     <html:li>Item 2</html:li>
                     <html:li>Item 3</html:li>
                     <html:li>Item 4</html:li>

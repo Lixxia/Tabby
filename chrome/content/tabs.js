@@ -1,8 +1,3 @@
-//To-Do:
-//Separate icon types into folders, transparent white, transparent black and colored tabs -> get rid of monochrome
-// img: "chrome://tabby/content/assets/images" + iconType + "/name.png" -> normalize names (i.e. all fb icons are fb.png within
-//   respective folders)
-//Create options menu with: choice of icon type (dropdown?) and list with checkboxes for tab choices
 var tabValues = {
     'facebook': {
         cimg: "fa fa-facebook fa-inverse fa-2x",

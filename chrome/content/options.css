@@ -13,7 +13,7 @@
     text-align:left;
     border: black 1px solid;
 }*/
-.sortable li {
+/*.sortable li {
     list-style: none outside none;
     border: 1px solid #CCC;
     background: none repeat scroll 0% 0% #F6F6F6;
@@ -22,9 +22,51 @@
     margin-left: -20px;
     padding: 5px;
     height: 22px;
-}
-checkbox:checked + label{
-	color: red;
+}*/
 
+li {
+	list-style: none outside none;
+    margin:6px; 
+    margin-left: -20px;
+    background-color:#EFEFEF;
+    border-radius:6px;
+    border:1px solid #D0D0D0;
+    overflow: auto;
+    height: 22px;
+    width: 100px;
+    color: #ccc;
+}
+
+li:hover {
+    margin:6px;
+    margin-left: -20px;
+    background-color:#EFEFEF;
+    border-radius:6px;
+    border:1px solid red;
+    overflow:auto;
+}
+
+input[type="checkbox"] {
+	opacity: 0;
+    margin-right: 11px;
+}
+li span {
+	width: 4.0em;
+}
+li span label {
+    text-align:center;
+    padding:3px;
+    color:#fff;
+}
+
+li span input {
+    position:absolute;
+    top:0px;
+}
+
+li input:checked + span {
+    color:#000;
+    font-style: bold;
+    text-align: center;
 }
 

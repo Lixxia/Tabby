@@ -71,7 +71,26 @@ function updateOptions() {
     }, false);
       document.getElementById("black").addEventListener("command", function (event) {
         tabbyprefs.setIntPref("extensions.tabby.icontype", 2);
-    }, false);
+    }, false);    
+}
+
+function updateOrder(orderArray) {
+    //Ordering of elements
+    var tabbyprefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+    var sOrderArray = orderArray.toString(); 
+    console.log(sOrderArray);
+    tabbyprefs.setCharPref("extensions.tabby.iconorder", sOrderArray);
+    var vbox = document.getElementById("updateMe");
+    var xulhtml = "";
+    for(var i=0;i<orderArray.length;i++) {
+        console.log(orderArray[i]);
+        xulhtml += "<html:label><html:li><html:input type='checkbox' persist='checked' id='"+orderArray[i]+"' /><html:span>"+orderArray[i]+"</html:span></html:li></html:label>"; 
+        
+        //"+orderArray[i]+
+        //<checkbox label='&tabbyoptions.facebook;' id='facebook' persist='checked' />
+    }
+    console.log(xulhtml);
+    vbox.innerHTML = xulhtml;
 }
 
 function fetchOptions() {

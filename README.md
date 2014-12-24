@@ -9,7 +9,7 @@ Firefox addon that opens on each new tab and displays:
 	- [ ] Change color of icons
 	- [ ] Change order of icons
 	- [ ] Change icon size
-	- [ ] Add and remove icons
+	- [x] Add and remove icons
 	- [ ] Turn off icons completely
 	- [ ] Change font (size, color, face, style)
 	- [ ] Change background (color, image)
