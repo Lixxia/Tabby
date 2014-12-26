@@ -18,78 +18,31 @@
 <script src="jquery.sortable.js"/>
 <tabbox>
     <tabs>
-        <tab label="&tabbyoptions.Tabs;"/>
-        <tab label="&tabbyoptions.Icons;"/>
+        <tab label="&tabbyoptions.Icon;"/>
+        <tab label="&tabbyoptions.Background;"/>
     </tabs>
     <tabpanels>
-        <tabpanel id="tabs">
+        <tabpanel id="icons">
             <vbox>
-                <html:ul class="sortable list" id="updateMe">
-                    <html:li><checkbox label='&tabbyoptions.facebook;' id='facebook' persist='checked' /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.twitter;" id="twitter" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.youtube;" id="youtube" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.wash;" id="wash" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.gplus;" id="gplus" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.gdrive;" id="gdrive" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.bank;" id="bank" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.linked;" id="linkedin" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.blogger;" id="blogger" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.pint;" id="pinterest" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.git;" id="github" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.space;" id="space" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.weather;" id="weather" persist="checked" /></html:li>
-                    <html:li><checkbox label="&tabbyoptions.clock;" id="clock" persist="checked" /></html:li>
+                <html:ul class="list" id="icons">
+                    <html:li><checkbox label='&tabbyoptions.foldericon;' id='foldericon' persist='checked' /></html:li>
+                    <html:li><checkbox label="&tabbyoptions.favicon;" id="favicon" persist="checked" /></html:li>
                 </html:ul>
-                <!-- Come back and look at this, find way to work around .children().children()
-                Need one array that keeps order of both checked and unchecked elements
-                need another array that keeps order of only checked elements -->
-                <html:script>
-                
-                    $('.sortable').sortable().bind('sortupdate', function() {
-                        //Triggered when the user stopped sorting and the DOM position has changed.
-                        var cbox = ($('.sortable').children().children());
-                        console.log(cbox);
-                        enabledTabs = [];
-                        $.each(cbox, function() {
-                            //if(($(this).attr('checked'))=="true") {
-                                //console.log($(this).attr('id'));
+            </vbox>
+            <vbox>
+                <label control="font-family" value="Font Family:"/>
+                <textbox id="font-family" value="Arial"/>
 
-                                enabledTabs.push($(this).attr('id'));
-                            //}
-                        });
-                        console.log(enabledTabs);
-                        updateOrder(enabledTabs);
-                    });
-
-                </html:script>
+                <label control="font-size" value="Font Size:"/>
+                <textbox id="font-size" type="number" min="8" max="100"value="12"/>
             </vbox>
         </tabpanel>
-<!--         <tabpanel id="sort">
-            <vbox>
-                <html:ul class="sortable list">
-                    <html:li><checkbox label="&tabbyoptions.acebook;" id="facebook" persist="checked" /></html:li>
-                    <html:li>Item 2</html:li>
-                    <html:li>Item 3</html:li>
-                    <html:li>Item 4</html:li>
-                    <html:li>Item 5</html:li>
-                    <html:li>Item 6</html:li>
-                </html:ul>
-                <html:script src="jquery.sortable.js"></html:script>
-                <html:script>
-                    $('.sortable').sortable();
-                </html:script>
-            </vbox>
-        </tabpanel> -->
-        <tabpanel id="icons">
+        <tabpanel id="background">
             <vbox>
                 <radiogroup>
                     <radio label="&tabbyoptions.Color;" id="color" persist="selected" />
                     <i class="fa fa-facebook fa-4x" id="colorimg"></i>
                     <radio label="&tabbyoptions.White;" id="white" persist="selected" />
-                    <span class="fa-stack">
-                        <i class="fa fa-square fa-stack-1x fa-5x"></i>
-                        <i class="fa fa-facebook fa-stack-1x fa-inverse fa-4x" id="whiteimg"></i>
-                    </span>
                     <radio label="&tabbyoptions.Black;" id="black" persist="selected" />
                     <i class="fa fa-facebook fa-4x" id="blackimg"></i>
                 </radiogroup>
