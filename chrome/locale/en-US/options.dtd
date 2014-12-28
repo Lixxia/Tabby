@@ -1,4 +1,6 @@
 <!ENTITY tabbyoptions.Background "Background">
 <!ENTITY tabbyoptions.Icons "Icons">
 <!ENTITY tabbyoptions.foldericon "Folder Icon">
-<!ENTITY tabbyoptions.faviocn "Favicon">
+<!ENTITY tabbyoptions.favicon "Favicon">
+<!ENTITY tabbyoptions.color "Color">
+<!ENTITY tabbyoptions.image "Image">

@@ -18,7 +18,7 @@
 <script src="jquery.sortable.js"/>
 <tabbox>
     <tabs>
-        <tab label="&tabbyoptions.Icon;"/>
+        <tab label="&tabbyoptions.Icons;"/>
         <tab label="&tabbyoptions.Background;"/>
     </tabs>
     <tabpanels>
@@ -34,17 +34,14 @@
                 <textbox id="font-family" value="Arial"/>
 
                 <label control="font-size" value="Font Size:"/>
-                <textbox id="font-size" type="number" min="8" max="100"value="12"/>
+                <textbox id="font-size" type="number" min="8" max="100" value="12"/>
             </vbox>
         </tabpanel>
         <tabpanel id="background">
             <vbox>
                 <radiogroup>
-                    <radio label="&tabbyoptions.Color;" id="color" persist="selected" />
-                    <i class="fa fa-facebook fa-4x" id="colorimg"></i>
-                    <radio label="&tabbyoptions.White;" id="white" persist="selected" />
-                    <radio label="&tabbyoptions.Black;" id="black" persist="selected" />
-                    <i class="fa fa-facebook fa-4x" id="blackimg"></i>
+                    <radio label="&tabbyoptions.color;" id="color" persist="selected" />
+                    <radio label="&tabbyoptions.image;" id="image" persist="selected" />
                 </radiogroup>
             </vbox>
         </tabpanel>
