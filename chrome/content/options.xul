@@ -5,7 +5,29 @@
 <?xml-stylesheet href="chrome://tabby/content/assets/font-awesome-4.1.0/css/font-awesome.min.css" type="text/css"?>
 
 
-<dialog id="tabby-prefs"
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/javascript" src="options.js"/>
+  <setting pref="extensions.tabby.ffamily" type="string" title="Font Family" desc="Font for bookmark links." />
+  <setting pref="extensions.tabby.fsize" type="integer" title="Font Size" desc="Size for bookmark font." />
+  <setting pref="extensions.tabby.foldericon" type="bool" title="Folder Icons" desc="Enable/disable folder icons next to bookmarks." />
+  <setting pref="extensions.tabby.favicon" type="bool" title="Favicons" desc="Enable/disable favicons next to bookmarks." />
+
+  <setting pref="extensions.tabby.background" id="bg" type="radio" title="Background">
+      <radiogroup>
+        <radio value="false" label="Color background"/>
+        <radio value="true" label="Image background"/>
+      </radiogroup>
+  </setting>
+<setting pref="extensions.tabby.backgroundimg" type="file" title="Background Image" desc="Image for background" oncommand="alert(this.type);"/>
+
+</vbox>
+
+
+
+
+
+
+<!-- <dialog id="tabby-prefs"
     title="Tabby Options"
     onload="updateOptions()"
     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
@@ -13,6 +35,7 @@
     persist="screenX screenY"
     buttons="accept"
 >
+
 <script type="application/javascript" src="options.js"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"/>
 <script src="jquery.sortable.js"/>
@@ -47,4 +70,4 @@
         </tabpanel>
     </tabpanels>
 </tabbox>
-</dialog>
+</dialog> -->

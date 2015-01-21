@@ -25,5 +25,6 @@
     <em:homepageURL>https://github.com/Lixxia/Tabby</em:homepageURL>
     <!-- <em:iconURL>geticonheresoon</em:iconURL> -->
     <em:optionsURL>chrome://tabby/content/options.xul</em:optionsURL>
+    <em:optionsType>2</em:optionsType>
   </Description>
 </RDF>
